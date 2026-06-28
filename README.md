@@ -1,63 +1,67 @@
-# 🍞 Bot do Pão
+# 🍞 "Bot do Pão" (Bread Bot) - selenium_whatsapp_reader
 
-Bot que lê mensagens do WhatsApp Web e salva automaticamente em uma planilha Excel, identificando remetente e mensagem.
+A bot that reads WhatsApp Web messages and automatically saves them to an Excel spreadsheet, identifying the sender and the message content.
 
-## 🚀 Funcionalidades
+## 🚀 Features
 
-- Login automático no WhatsApp Web
-- Leitura de mensagens em loop
-- Captura do número do remetente
-- Filtro de mensagens repetidas e lixo (menus, horários, datas)
-- Salva em planilha Excel (.xlsx)
+- Automatic login to WhatsApp Web
+- Continuous message reading loop
+- Sender number capture
+- Filtering of duplicate messages and "junk" data (menus, timestamps, dates)
+- Saves data to an Excel spreadsheet (.xlsx)
 
-## 🛠️ Tecnologias
+## 🛠️ Technologies
 
 - Python 3.10+
 - Selenium
 - OpenPyXL
 - WebDriver Manager
 
-## 📦 Como instalar
+## 📦 Installation
 
-1. Clone o repositório:
+1. Clone the repository:
 ```bash
-git clone https://github.com/seu-usuario/bot_do_pao.git
+git clone https://github.com/your-username/bot_do_pao.git
 cd bot_do_pao
+```
 
-2. Crie e ative um ambiente virtual:
+2. Create and activate a virtual environment:
 
-bash
+```bash
 python -m venv venv
 venv\Scripts\activate
+```
 
-3. Instale as dependências:
+3. Install dependencies:
 
-bash
+```bash
 pip install -r requirements.txt
+```
 
-
-▶️ Como rodar
-bash
+▶️ How to run
+```bash
 python main.py
-📂 Como funciona o código
-main.py: orquestrador principal
+```
 
-core/login.py: responsável pelo login no WhatsApp
+📂 How the code works
+`main.py`: Main orchestrator
 
-core/escritor_master.py: lê os spans, filtra lixo e salva na planilha
+`core/login.py`: Handles WhatsApp login
 
-🧪 Status do projeto
-✅ Leitura de mensagens e remetente
-✅ Filtro de lixo (menus, horários, datas)
-✅ Loop contínuo (a cada 15 segundos)
-⚠️ Tratamento de arquivo Excel aberto (em andamento)
+`core/escritor_master.py`: Reads HTML elements (spans), filters junk data, and saves to the spreadsheet
 
-📌 Próximos passos
-Classificação de mensagens (cliente, entregador, fornecedor)
+🧪 Project status
+✅ Message and sender reading
+✅ Junk data filtering (menus, timestamps, dates)
+✅ Continuous loop (every 15 seconds)
+⚠️ Handling open Excel files (in progress)
 
-Respostas automáticas
+📌 Next steps
+Message classification (customer, delivery person, supplier)
 
-Interface gráfica simples
+Automatic responses
 
-🤝 Contribuição
-Este projeto é open source. Sinta-se à vontade para contribuir!
+Simple graphical interface
+
+🤝 Contribution
+This project is open source. Feel free to contribute!
