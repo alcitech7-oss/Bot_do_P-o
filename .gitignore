@@ -34,3 +34,4 @@ logs/
 dist/
 build/
 *.min.js
+testes/
