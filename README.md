@@ -1,63 +1,45 @@
 # 🍞 Bot do Pão
 
-Bot que lê mensagens do WhatsApp Web e salva automaticamente em uma planilha Excel, identificando remetente e mensagem.
+Bot que lê mensagens do WhatsApp Web, classifica por categoria (Pedido, Reclamação, Entrega, etc.) e salva em planilha Excel.
 
 ## 🚀 Funcionalidades
-
-- Login automático no WhatsApp Web
-- Leitura de mensagens em loop
-- Captura do número do remetente
-- Filtro de mensagens repetidas e lixo (menus, horários, datas)
-- Salva em planilha Excel (.xlsx)
+- Login automático via QR Code
+- Leitura de mensagens em tempo real
+- Classificação com inteligência (spaCy)
+- Planilha com abas separadas por categoria
+- Filtro de mensagens repetidas
 
 ## 🛠️ Tecnologias
-
 - Python 3.10+
 - Selenium
 - OpenPyXL
-- WebDriver Manager
+- spaCy
 
 ## 📦 Como instalar
-
-1. Clone o repositório:
 ```bash
 git clone https://github.com/seu-usuario/bot_do_pao.git
 cd bot_do_pao
-
-2. Crie e ative um ambiente virtual:
-
-bash
 python -m venv venv
 venv\Scripts\activate
-
-3. Instale as dependências:
-
-bash
 pip install -r requirements.txt
-
-
+python -m spacy download pt_core_news_sm
 ▶️ Como rodar
 bash
 python main.py
-📂 Como funciona o código
-main.py: orquestrador principal
+📂 Estrutura
+. main.py: orquestrador
 
-core/login.py: responsável pelo login no WhatsApp
+. core/login.py: login no WhatsApp
 
-core/escritor_master.py: lê os spans, filtra lixo e salva na planilha
+. core/extrator.py: extrai e classifica mensagens
 
-🧪 Status do projeto
-✅ Leitura de mensagens e remetente
-✅ Filtro de lixo (menus, horários, datas)
-✅ Loop contínuo (a cada 15 segundos)
-⚠️ Tratamento de arquivo Excel aberto (em andamento)
+. core/seletores.py: seletores XPath
 
-📌 Próximos passos
-Classificação de mensagens (cliente, entregador, fornecedor)
-
-Respostas automáticas
-
-Interface gráfica simples
+📌 Status
+✅ Leitura de mensagens
+✅ Classificação por categoria
+✅ Loop contínuo
+⚠️ Ajuste fino da classificação (em andamento)
 
 🤝 Contribuição
-Este projeto é open source. Sinta-se à vontade para contribuir!
+Sinta-se à vontade para contribuir!
