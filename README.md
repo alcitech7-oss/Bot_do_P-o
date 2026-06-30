@@ -1,4 +1,4 @@
-# 🍞 "Bot do Pão" (Bread Bot) - selenium_whatsapp_reader
+#  selenium_whatsapp_reader
 
 A bot that reads WhatsApp Web messages and automatically saves them to an Excel spreadsheet, identifying the sender and the message content.
 
